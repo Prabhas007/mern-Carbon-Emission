@@ -1,0 +1,23 @@
+:root {
+  --primary: #2e7d32; /* green */
+  --accent: #81c784;
+  --bg: #f6f8f7;
+  --text: #1b1b1b;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+/* small accessible focus styles */
+button:focus, a:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(46,125,50,0.25);
+  outline-offset: 2px;
+}
+
+/* simple uniform theme enforcement for custom elements */
+.MuiPaper-root {
+  border-radius: 12px;
+}
