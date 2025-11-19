@@ -21,3 +21,7 @@ button:focus, a:focus, input:focus, textarea:focus {
 .MuiPaper-root {
   border-radius: 12px;
 }
+
+/* small spacing for calculator */
+.MuiPaper-root { padding: 16px; }
+pre { background: #f4f6f8; padding: 12px; border-radius: 6px; }

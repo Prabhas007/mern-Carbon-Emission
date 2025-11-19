@@ -10,6 +10,7 @@ import AdminPanel from "./pages/AdminPanel";
 import TipsFeed from "./pages/TipsFeed";
 import ProtectedRoute from "./components/ProtectedRoute";
 import RoleRoute from "./components/RoleRoute";
+import CalculatorMultiStep from "./pages/CalculatorMultiStep";
 import FootprintForm from "./pages/FootprintForm";
 import { ROLES } from "./roles";
 import { Container, Typography } from "@mui/material";
@@ -33,6 +34,12 @@ export default function App() {
 
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+
+          <Route path="/calculator" element={
+            <ProtectedRoute>
+              <CalculatorMultiStep />
+            </ProtectedRoute>
+          } />
 
           <Route path="/footprint" element={
             <ProtectedRoute>

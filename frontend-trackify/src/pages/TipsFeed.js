@@ -15,7 +15,7 @@ export default function TipsFeed() {
   const fetchTips = async () => {
     setLoading(true);
     try {
-      const res = await API.get("/tips");
+      const res = await API.get("http://localhost:5000/api/tips");
       setTips(res.data || []);
     } catch (err) {
       console.error(err);
@@ -35,7 +35,7 @@ export default function TipsFeed() {
       return;
     }
     try {
-      await API.post("/tips", { text: text.trim() });
+      await API.post("http://localhost:5000/api/tips", { text: text.trim() });
       setText("");
       fetchTips();
     } catch (err) {
@@ -45,7 +45,7 @@ export default function TipsFeed() {
 
   const handleLike = async (id) => {
     try {
-      await API.post(`/tips/${id}/like`);
+      await API.post(`http://localhost:5000/api/tips/${id}/like`);
       fetchTips();
     } catch (err) {
       console.error(err);

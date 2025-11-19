@@ -27,7 +27,8 @@ export default function Navbar() {
                 <RoleBadge key={r} role={r} />
               ))}
               <Button color="inherit" component={RouterLink} to="/dashboard">Dashboard</Button>
-              <Button color="inherit" component={RouterLink} to="/footprint">Record Footprint</Button>
+              {/* <Button color="inherit" component={RouterLink} to="/footprint">Record Footprint</Button> */}
+              <Button color="inherit" component={RouterLink} to="/calculator">Calculator</Button>
               <Button color="inherit" component={RouterLink} to="/tips">Tips</Button>
               <Button color="inherit" onClick={logout}>Logout</Button>
             </>
